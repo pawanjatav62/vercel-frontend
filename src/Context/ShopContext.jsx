@@ -2,6 +2,8 @@ import React, { createContext, useEffect, useState } from "react";
 
 export const ShopContext = createContext(null);
 
+const API = "https://vercel-backend-q3tv.onrender.com/";
+
 // Default cart
 const getDefaultCart = () => {
   let cart = {};
@@ -23,7 +25,8 @@ const ShopContextProvider = (props) => {
   useEffect(() => {
     console.log("🔥 USE EFFECT RUN");
 
-    fetch("http://localhost:4000/allproducts")
+    // fetch("http://localhost:4000/allproducts")
+    fetch("https://vercel-backend-q3tv.onrender.com/all_product")
       .then((res) => res.json())
       .then((data) => setAll_product(data));
 
