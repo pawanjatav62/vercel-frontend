@@ -37,7 +37,9 @@ const ShopContextProvider = (props) => {
     if (token) {
       console.log("🔥 CALLING GET CART API");
 
-      fetch("http://localhost:4000/getcart", {
+      // fetch(  "http://localhost:4000/getcart"
+    fetch("https://vercel-backend-q3tv.onrender.com/getcart" ,
+       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -75,7 +77,9 @@ const ShopContextProvider = (props) => {
 
       // })
 
-      fetch('http://localhost:4000/addtocart', {
+      // fetch('http://localhost:4000/addtocart'
+    fetch("https://vercel-backend-q3tv.onrender.com/addtocart"
+        , {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -101,7 +105,8 @@ const ShopContextProvider = (props) => {
     }));
 
     if (localStorage.getItem('auth-token')) {
-      fetch('http://localhost:4000/removefromcart', {
+      // fetch('http://localhost:4000/removefromcart'
+    fetch("https://vercel-backend-q3tv.onrender.com/removefromcart", {
         method: 'POST',
         headers: {
           // Accept: 'application/form-data',
