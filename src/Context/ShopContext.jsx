@@ -26,7 +26,7 @@ const ShopContextProvider = (props) => {
     console.log("🔥 USE EFFECT RUN");
 
     // fetch("http://localhost:4000/allproducts")
-    fetch("https://vercel-backend-q3tv.onrender.com/all_product")
+    fetch("https://vercel-backend-q3tv.onrender.com/allproducts")
       .then((res) => res.json())
       .then((data) => setAll_product(data));
 
