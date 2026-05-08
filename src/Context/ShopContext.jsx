@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from "react";
 
 export const ShopContext = createContext(null);
 
-const API = "https://vercel-backend-q3tv.onrender.com/";
+// const API = "https://vercel-backend-q3tv.onrender.com/";
 
 // Default cart
 const getDefaultCart = () => {
