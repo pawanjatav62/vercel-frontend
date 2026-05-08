@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './CSS/LoginSignup.css'
 
+const API = "https://vercel-backend-q3tv.onrender.com";
+
 const LoginSignup = () => {
 
   const [state, setState] = useState("Login")
@@ -17,7 +19,11 @@ const LoginSignup = () => {
 
   const login = async () => {
   try {
-    const response = await fetch("http://localhost:4000/login", {
+    // const response = await fetch("http://localhost:4000/login"
+    // const response =await fetch("https://vercel-backend-q3tv.onrender.com/login"
+
+    fetch(`${API}/login`
+      , {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -75,7 +81,10 @@ const LoginSignup = () => {
     console.log("Signup Function Executed", fromData);
 
     try {
-      const response = await fetch("http://localhost:4000/signup", {
+      // const response = await fetch("http://localhost:4000/signup"
+    // const response =await fetch("https://vercel-backend-q3tv.onrender.com/signup"
+    fetch(`${API}/signup`
+        , {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
