@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './CSS/LoginSignup.css'
 
-const API = "https://vercel-backend-q3tv.onrender.com";
+// const API = "https://vercel-backend-q3tv.onrender.com";
 
 const LoginSignup = () => {
 
@@ -20,9 +20,9 @@ const LoginSignup = () => {
   const login = async () => {
   try {
     // const response = await fetch("http://localhost:4000/login"
-    // const response =await fetch("https://vercel-backend-q3tv.onrender.com/login"
+    const response =await fetch("https://vercel-backend-q3tv.onrender.com/login"
 
-    fetch(`${API}/login`
+    // fetch(`${API}/login`
       , {
       method: "POST",
       headers: {
@@ -82,8 +82,8 @@ const LoginSignup = () => {
 
     try {
       // const response = await fetch("http://localhost:4000/signup"
-    // const response =await fetch("https://vercel-backend-q3tv.onrender.com/signup"
-    fetch(`${API}/signup`
+    const response =await fetch("https://vercel-backend-q3tv.onrender.com/signup"
+    // fetch(`${API}/signup`
         , {
         method: "POST",
         headers: {
