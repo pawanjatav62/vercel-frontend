@@ -134,7 +134,38 @@
     }
 }
 
-@media(max-width:800px) {
+@media(max-width:800px){
+    .nav-menu{
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+
+    .nav-menu-visible{
+        display: flex;
+    }
+
+    .nav-dropdown{
+        display: block;
+        width: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .nav-dropdown.open{
+        transform: rotate(90deg);
+    }
+}
+
+/* @media(max-width:800px) {
     .navbar {
         padding: 10px 0px;
         
@@ -179,4 +210,4 @@
     .nav-login-cart {
         transform: scale(0.8);
     }
-}
+} */

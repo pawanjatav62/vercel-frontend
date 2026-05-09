@@ -1,13 +1,9 @@
-
-  .popular {
-  text-align: center;
-  padding: 50px 20px;
-  margin: 0 auto;
-  
+.popular {
   width: 100%;
+  padding: 50px 20px;
   box-sizing: border-box;
+  text-align: center;
 }
-
 
 .popular h1 {
   color: #171717;
@@ -18,82 +14,124 @@
 .popular hr {
   width: 200px;
   height: 6px;
+  border: none;
   border-radius: 10px;
-  background-color: #252525;
-  margin: auto;
+  background: #252525;
+  margin: 15px auto;
 }
 
-/* .popular-item {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-top: 40px;
-} */
+/* Products Grid */
 
 .popular-item {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
+  grid-template-columns: repeat(4, 220px);
   justify-content: center;
-
-   /* display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px; 
-  margin-top: 40px;  */
+  gap: 30px;
+  margin-top: 40px;
 }
 
-/* Laptop */
-@media(max-width:1280px){
-  .popular h1{
+/* Product Card */
+
+.popular-item > * {
+  width: 220px;
+  margin: 0 auto;
+}
+
+.popular-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================
+   Laptop
+========================= */
+
+@media (max-width: 1280px) {
+  .popular h1 {
     font-size: 40px;
   }
 
-  .popular hr{
+  .popular hr {
     width: 160px;
     height: 4px;
   }
 
-  .popular-item{
-    gap: 20px;
+  .popular-item {
+    grid-template-columns: repeat(4, 240px);
+    gap: 30px;
+  }
+
+  .popular-item > * {
+    width: 200px;
   }
 }
 
-/* Tablet */
-@media(max-width:1024px){
-  .popular h1{
-    font-size: 30px;
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1024px) {
+  .popular {
+    padding: 40px 15px;
   }
 
-  .popular hr{
+  .popular h1 {
+    font-size: 32px;
+  }
+
+  .popular hr {
     width: 120px;
     height: 3px;
   }
 
-  .popular-item{
-    grid-template-columns: repeat(3, 1fr);
+  .popular-item {
+    grid-template-columns: repeat(3, 200px);
+    gap: 20px;
+  }
+
+  .popular-item > * {
+    width: 200px;
   }
 }
 
-/* Mobile */
-@media(max-width:800px){
-  .popular h1{
-    font-size: 22px;
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 800px) {
+  .popular {
+    padding: 30px 10px;
   }
 
-  .popular hr{
+  .popular h1 {
+    font-size: 24px;
+  }
+
+  .popular hr {
     width: 100px;
   }
 
-  .popular-item{
-    /* grid-template-columns: 2fr; */
-    grid-template-columns: repeat(2, 1fr);
+  .popular-item {
+    grid-template-columns: repeat(2, 170px);
+    gap: 15px;
+  }
+
+  .popular-item > * {
+    width: 170px;
   }
 }
 
-/* Small Mobile */
-@media(max-width:500px){
-  .popular-item{
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 500px) {
+  .popular-item {
     grid-template-columns: 1fr;
+  }
+
+  .popular-item > * {
+    width: 220px;
   }
 }
