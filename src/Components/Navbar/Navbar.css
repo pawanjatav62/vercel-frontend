@@ -170,7 +170,8 @@
 
 @media(max-width:500px) {
     .navbar {
-        width: 8px 0px;
+        /* width: 8px 0px; */
+        width: 100%;
         gap: 0;
     }
 

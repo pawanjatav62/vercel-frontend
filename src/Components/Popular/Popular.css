@@ -1,9 +1,13 @@
-.popular {
+
+  .popular {
   text-align: center;
-  padding: 50px 90px;
-  /* max-width: 1200px;sss */
+  padding: 50px 20px;
   margin: 0 auto;
+  
+  width: 100%;
+  box-sizing: border-box;
 }
+
 
 .popular h1 {
   color: #171717;
@@ -19,20 +23,20 @@
   margin: auto;
 }
 
-.popular-item {
+/* .popular-item {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin-top: 40px;
-}
+} */
 
-/* .popular-item {
+.popular-item {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   margin-top: 40px;
   justify-content: center;
-} */
+}
 
 /* Laptop */
 @media(max-width:1280px){
